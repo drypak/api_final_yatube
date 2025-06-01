@@ -38,20 +38,29 @@ python manage.py runserver
 
 
 **Примеры запросов**
-- *Получить список постов*:  
-  GET /api/v1/posts/  
-- *Создать пост (требуется авторизация):  
+- *Получить список постов*:
+- ```http
+  GET /api/v1/posts/
+  ```
+  
+- *Создать пост (требуется авторизация)*:
+-  ```http
   POST /api/v1/posts/  
+  ```
   Тело запроса:  
   {  
   "text": "Мой первый пост!",  
   "group": 1,  
   "image": null  
   }  
-- *Добавить комментарий к посту*:  
-  POST /api/v1/posts/{post_id}/comments/  
-- Подписаться на пользователя:  
-  POST /api/v1/follow/  
+- *Добавить комментарий к посту*:
+  ```http  
+  POST /api/v1/posts/{post_id}/comments/
+  ```
+- Подписаться на пользователя:
+- ```http
+  POST /api/v1/follow/
+  ```
   Тело запроса:
   {  
   "following": "username"  
