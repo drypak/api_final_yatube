@@ -23,10 +23,8 @@ cd api_final_yatube
 
 **2.** <ins>Создайте и активируйте виртуальное окружение</ins>:
 ````markdown
-```bash
 python -m venv venv
-source venv\Scripts\activate ~~или venv/bin/activate на Mac OS~~
-```
+source venv\Scripts\activate или venv/bin/activate на Mac OS
 ````
 
 **3.** <ins>Установите зависимости</ins>:
