@@ -84,7 +84,7 @@ python manage.py runserver
 ```http
 POST /api/v1/token/
 ```  
-<ins>Обновить токен</ins>  
+<ins>Обновить токен</ins>:  
 ```http
 POST /api/v1/token/refresh/  
 ```
