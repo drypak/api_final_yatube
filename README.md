@@ -48,7 +48,7 @@ python manage.py runserver
   POST /api/v1/posts/  
   ```
 - *<ins>Тело запроса</ins>*:
-- ```json
+  ```json
   {  
   "text": "Мой первый пост!",  
   "group": 1,  
@@ -60,7 +60,7 @@ python manage.py runserver
   POST /api/v1/posts/{post_id}/comments/
   ```
 - *<ins>Тело запроса*</ins>*:
-- ```json
+  ```json
   {  
   "text": "Вау!"  
   }  
@@ -70,7 +70,7 @@ python manage.py runserver
   POST /api/v1/follow/
   ```
 - *<ins>Тело запроса</ins>*:
-- ```json
+  ```json
   {  
   "following": "username"  
   }
