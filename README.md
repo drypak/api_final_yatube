@@ -61,10 +61,10 @@ python manage.py runserver
   ```
 - *<ins>Тело запроса*</ins>*:
 - ```json
-- {
-  "text": "Вау!"
-  }
-  ```
+  {  
+  "text": "Вау!"  
+  }  
+  ```  
 - *<ins>Подписаться на пользователя</ins>*:
   ```http
   POST /api/v1/follow/
