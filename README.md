@@ -47,7 +47,7 @@ python manage.py runserver
   ```http
   POST /api/v1/posts/  
   ```
-- Тело запроса:  
+- *<ins>Тело запроса*</ins>:  
   {  
   "text": "Мой первый пост!",  
   "group": 1,  
@@ -61,7 +61,7 @@ python manage.py runserver
   ```http
   POST /api/v1/follow/
   ```
-  Тело запроса:
+- *<ins>Тело запроса*</ins>:
   {  
   "following": "username"  
   }
