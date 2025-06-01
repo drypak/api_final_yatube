@@ -81,11 +81,11 @@ python manage.py runserver
 - *Для создания и редактирования нужно авторизоваться. Используется JWT, токены можно получить тут*:
   <ins>Получить токен</ins>:
   ```http
- /api/v1/token/
-  ```
+ POST /api/v1/token/
+ ```
 <ins>Обновить токен</ins>
   ```http
-- /api/v1/token/refresh/
-  ```
+POST /api/v1/token/refresh/
+```
 
 
