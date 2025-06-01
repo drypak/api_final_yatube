@@ -44,10 +44,10 @@ python manage.py runserver
   ```
   
 - *Создать пост (требуется авторизация)*:
--  ```http
+  ```http
   POST /api/v1/posts/  
   ```
-  Тело запроса:  
+- Тело запроса:  
   {  
   "text": "Мой первый пост!",  
   "group": 1,  
@@ -57,8 +57,8 @@ python manage.py runserver
   ```http  
   POST /api/v1/posts/{post_id}/comments/
   ```
-- Подписаться на пользователя:
-- ```http
+- *Подписаться на пользователя*
+  ```http
   POST /api/v1/follow/
   ```
   Тело запроса:
