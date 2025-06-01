@@ -47,12 +47,14 @@ python manage.py runserver
   ```http
   POST /api/v1/posts/  
   ```
-- *<ins>Тело запроса*</ins>:  
+- *<ins>Тело запроса*</ins>:
+- ```json
   {  
   "text": "Мой первый пост!",  
   "group": 1,  
   "image": null  
-  }  
+  }
+  ```
 - *Добавить комментарий к посту*:
   ```http  
   POST /api/v1/posts/{post_id}/comments/
@@ -62,9 +64,11 @@ python manage.py runserver
   POST /api/v1/follow/
   ```
 - *<ins>Тело запроса*</ins>:
+- ```json
   {  
   "following": "username"  
   }
+  ```
 
 
 **Авторизация** 
