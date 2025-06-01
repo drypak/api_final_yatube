@@ -14,20 +14,14 @@
 **Как запустить локально**
 
 **1.** <ins>Клонируйте репозиторий</ins>:
-````markdown
 ```bash
 git clone https://github.com/drypak/api_final_yatube.git
 cd api_final_yatube
-```
-````
 
 **2.** <ins>Создайте и активируйте виртуальное окружение</ins>:
-````markdown
 ```bash
 python -m venv venv
 source venv\Scripts\activate или venv/bin/activate на Mac OS
-```
-````
 
 **3.** <ins>Установите зависимости</ins>:
 
