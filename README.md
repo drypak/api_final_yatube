@@ -26,4 +26,41 @@ source venv\Scripts\activate или venv/bin/activate на Mac OS
 ```
 
 **3.** <ins>Установите зависимости</ins>:
+```bash
+pip install -r requirements.txt
+```
+
+**4.** <ins>Сделайте миграции и запустите сервер</ins>:
+```bash
+python manage.py migrate
+python manage.py runserver
+```
+
+
+**Примеры запросов**
+- *Получить список постов*:  
+  GET /api/v1/posts/  
+- *Создать пост (требуется авторизация):  
+  POST /api/v1/posts/  
+  Тело запроса:  
+  {  
+  "text": "Мой первый пост!",  
+  "group": 1,  
+  "image": null  
+  }  
+- *Добавить комментарий к посту*:  
+  POST /api/v1/posts/{post_id}/comments/  
+- Подписаться на пользователя:  
+  POST /api/v1/follow/  
+  Тело запроса:
+  {  
+  "following": "username"  
+  }
+
+
+**Авторизация** 
+- *Для создания и редактирования нужно авторизоваться. Используется JWT, токены можно получить тут*:
+- /api/v1/token/ — получить токен  
+- /api/v1/token/refresh/ — обновить токен  
+
 
