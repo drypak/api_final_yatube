@@ -1,15 +1,19 @@
 from django.shortcuts import get_object_or_404
+
 from rest_framework import filters
 from rest_framework.permissions import (
     IsAuthenticated,
     IsAuthenticatedOrReadOnly
 )
+
+from constants import FOLLOWING_USERNAME_FIELD
+
 from rest_framework import viewsets
 from rest_framework.pagination import LimitOffsetPagination
 
 from posts.models import Group, Post
 from .mixins import ListCreateViewSet
-from .permissions import IsOwnerOrReadOnly
+from .permissions import IsOwnerOrReadOnlyPermission
 from .serializers import (
     CommentSerializer,
     GroupSerializer,
@@ -41,7 +45,7 @@ class PostViewSet(viewsets.ModelViewSet):
 
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    permission_classes = (IsOwnerOrReadOnly,)
+    permission_classes = (IsOwnerOrReadOnlyPermission,)
     pagination_class = LimitOffsetPagination
 
     def perform_create(self, serializer):
@@ -59,7 +63,7 @@ class CommentViewSet(viewsets.ModelViewSet):
     """
 
     serializer_class = CommentSerializer
-    permission_classes = (IsOwnerOrReadOnly,)
+    permission_classes = (IsOwnerOrReadOnlyPermission,)
 
     def get_post(self):
         """Находим пост из урла."""
@@ -89,7 +93,7 @@ class FollowViewSet(ListCreateViewSet):
     serializer_class = FollowSerializer
     permission_classes = (IsAuthenticated,)
     filter_backends = (filters.SearchFilter,)
-    search_fields = ('following__username',)
+    search_fields = (FOLLOWING_USERNAME_FIELD,)
 
     def get_queryset(self):
         """Получаем все подписки текущего юзера."""
