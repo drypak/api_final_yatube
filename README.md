@@ -39,7 +39,7 @@ python manage.py runserver
 
 **Примеры запросов**
 - *Получить список постов*:
-- ```http
+  ```http
   GET /api/v1/posts/
   ```
   
