@@ -37,7 +37,7 @@ python manage.py runserver
 ```
 
 
-**Примеры запросов**
+**Примеры запросов**  
 - *</ins>Получить список постов</ins>*:  
   ```http  
   GET /api/v1/posts/  
