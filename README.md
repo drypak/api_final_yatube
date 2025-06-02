@@ -59,7 +59,7 @@ python manage.py runserver
   ```http  
   POST /api/v1/posts/{post_id}/comments/  
   ```  
-- *<ins>Тело запроса*</ins>*:  
+- *<ins>Тело запроса</ins>*:  
   ```json  
   {  
   "text": "Вау!"  
@@ -89,6 +89,15 @@ POST /api/v1/token/
 POST /api/v1/token/refresh/  
 ```
 
+##Технологии
+**В проекте использованы:**
+- Python 3.9  
+- Django 3.2.16  
+- Django REST Framework 3.12.4  
+- djangorestframework-simplejwt 4.7.2 (JWT-аутентификация)   
+- PyJWT 2.1.0 (JWT-токены)  
+- requests 2.26.0 (HTTP-запросы)  
+- pytest 6.2.4 и pytest-django 4.4.0 (тестирование)  
 
 **Автор**  
 Рафаэль Обухов — студент 106 когорты по бэкенд-разработке Яндекс Практикума.  
